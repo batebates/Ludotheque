@@ -1,35 +1,169 @@
 body {
-	background-color: url(fond.jpg);
-	border: 
+	background-image: url(fond.jpg);
+	max-width: 60%;
+	max-height: 100%;
+	margin-left: 20%;
+
 }
 
 header{
 	padding-bottom: 60px;
 	text-align: center;
 	font-style: bold;
-	color: white;
+	color: #15D021;
 	background-image: url(header.png);
+	border-radius: 10px;
+	max-height: 120px; 
+	margin-top: -11px;
+}
+
+header h1{
+	margin-left: 20%;	
+	
+}	
+
+
+a {
+	text-decoration: none;
+}
+
+#inscription form{
+	display: block;
+	color: black;
+	width: 20%;
+	height: 25%;
+	position: relative;
+	margin-top: -6.1%;
+	border: solid medium black;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#inscription p{
+	font-size: 15px;
+}
+
+#inscription input{
+	border-radius: 5px;
+}
+
+#inscription a{
+	color: blue;
+	padding: 0px;
+	margin-left: -70px;
+	font-size: 13px;
 	
 }
-#gauche {
 
-	width: 10%;
+#conteneur_menu{
+	height: 40px;
+	position: relative;
+
+	margin-left: 32%;
+	margin-top: -4%;
+	
+}
+#menu{
+	position: absolute;
+	margin-left: -30px;
+	margin-top: -45px;
+}
+
+dl {
+	margin: 30px 15px 0px 0px;
+	padding: 0px;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	width: 150px;
+}
+
+dt a{
+	color: royalblue;
+}
+
+dt {
+	display: block;
+	height: 30px;
+	color: royalblue;
+	border: solid 1px black;
+	border-radius: 10px;
+	font-size: 25px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+dd{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 10px;
+	
+
+}
+
+dd ul{
+	margin-top: 0px;
+	padding: 0px;
+	text-align: center;
+	list-style: none;
+	
+}
+
+dd ul li{
+	margin-top: 2px;
+}
+
+dd ul li a{
+	display: block;
+	color: black;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, .5);
+	border: solid thin black;
+	border-radius: 10px;
+	height: 30px;
+	line-height: 30px;
+}
+
+dd ul li a:hover{
+	background: black;
+	color: white;
+}
+
+dl dd{
+	display: none;
+}
+
+dl:hover dd{
+	display: block;
+}
+
+#gauche {
+	
 	display: inline-block; 
 	vertical-align: top;
-	margin-left: 20%;
 	background-color: #0080D0;
-	border-right: medium solid purple;
 	border-bottom: medium solid black;
 	border-left: medium solid black;
 	border-top: medium solid black;
-	margin-right: 0px;
+	width: 20%;
+}
 	
+#gauche input{
+	width: 90%;
+	padding-left: 15px;
 
 }
 
+#lol{
+	border-radius: 5px;
+	width: 90%;
+	margin-left: 2%;	
+}	
 
-#bla {
-	font-size: 20px;
+#zone_inscription{
+	font-size: 30px;
 	width: 40%;
 	text-align: justify;
 	padding: 20px;
@@ -39,19 +173,117 @@ header{
 	border-bottom: medium solid black;
 	border-right: medium solid black;
 	border-top: medium solid black;
-	margin-left: 0px;
+	height: 703px;
+	line-height: 60px;
+	margin-left: -8px;
+	color: darkblue;
+}
+
+#zone_inscription label{
+	margin-left: 200px;
+}
+
+#pseudo{
+	margin-left: 112px;
+}
+
+#pass{
+	margin-left: 79px;
+}
+
+#email{
+	margin-left: 80px;
+}
+
+#adresse{
+	margin-left: 133px;
+}
+
+#age{
+	margin-left: 15px;
+}
+
+#bouton{
+	width: 50px;
+	margin-left: 350px;
+}
+#zone_inscription form{
+	background-color: lightblue;
+	border-radius: 5px;
+}
+
+#bla {
+	
+	font-size: 20px;
+	text-align: justify;
+	padding: 20px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+	border-bottom: medium solid black;
+	border-right: medium solid black;
+	border-top: medium solid black;
+	width: 75.99%;
+	margin-left: -5px;
+}
+
+#n_bla {
+	
+	font-size: 15px;
+	text-align: justify;
+	padding: 20px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+	border-bottom: medium solid black;
+	border-right: medium solid black;
+	border-top: medium solid black;
+	width: 75.99%;
+	margin-left: -5px;
+}
+
+#n_gauche{
+	display: inline-block; 
+	vertical-align: top;
+	background-color: #0080D0;
+	border-bottom: medium solid black;
+	border-left: medium solid black;
+	border-top: medium solid black;
+	width: 20%;
+	height: 720px;
+}
+	
+
+ 
+
+
+.date{
+	color: royalblue;
+	}
+
+#fin{
+	display: inline-block;
+	vertical-align: top;
+	background-color: white;
+	border-bottom: medium solid black;
+	border-right: medium solid black;
+	border-top: medium solid black;
+	margin-left: -8px;
 	
 }
 
-
-
 footer {
 	font-size: 20px;
-	padding: 5px;
-	padding-top: 40px;
+	padding-top: 20px;
 	text-align: center;
 	background-image: url(fond.jpg);
-	
+	border-right: solid medium black;
+	border-left: solid medium black;
+	border-bottom: solid medium black;
+}
+
+footer a{
+	padding-right: 3%;
 }
 
 
