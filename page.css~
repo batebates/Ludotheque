@@ -25,16 +25,7 @@ a {
 	text-decoration: none;
 }
 
-#img p{
-	display: block;
 
-}	
-
-#img img{
-	display: block;
-	float: left;
-
-}
 
 #inscription form{
 	display: block;
@@ -175,15 +166,20 @@ dl:hover dd{
 }	
 
 #zone_inscription{
-font-size: 20px;
+	font-size: 30px;
+	width: 40%;
 	text-align: justify;
 	padding: 20px;
 	display: inline-block;
 	vertical-align: top;
 	background-color: white;
-	width: 69%;
-	margin-left: 130px;
-	border-radius: 10px;
+	border-bottom: medium solid black;
+	border-right: medium solid black;
+	border-top: medium solid black;
+	height: 703px;
+	line-height: 60px;
+	margin-left: -8px;
+	color: darkblue;
 }
 
 #zone_inscription label{
@@ -191,7 +187,7 @@ font-size: 20px;
 }
 
 #pseudo{
-	margin-left: 80px;
+	margin-left: 112px;
 }
 
 #pass{
@@ -234,17 +230,17 @@ font-size: 20px;
 
 #n_bla {
 	
-	font-size: 12px;
+	font-size: 15px;
 	text-align: justify;
 	padding: 20px;
 	display: inline-block;
 	vertical-align: top;
 	background-color: white;
-	width: 69%;
-	margin-left: 130px;
-	border-radius: 10px;
-	line-height: 25px;
-	word-spacing: -3px;
+	border-bottom: medium solid black;
+	border-right: medium solid black;
+	border-top: medium solid black;
+	width: 75.99%;
+	margin-left: -5px;
 }
 
 #n_gauche{
@@ -275,10 +271,6 @@ font-size: 20px;
 	margin-left: 13%;
 	text-align: center;
 	
-}
-#n_bla ul ul li{
-	display: list-item;
-	list-style-image: url(sabre.ico);
 }
 
 footer {

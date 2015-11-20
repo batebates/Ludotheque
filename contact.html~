@@ -11,27 +11,7 @@
 
 	<body>
 		
-		<header>
-			<h1>Sith de jeux en ligne!</h1>
-				
-			<!--Inscritption-->
-			<div id="inscription">
-				
-				
-				<form method="post" action="traitement.php">
-						<p> Connexion</p>	
-						<p>
-							<label for="pseudo">Identifiant:</label><br />
-							<input type="text" name="pseudo" id="nickname" /><br />  						
-							<label for="pass">Mot de passe :</label><br />
-							<input type="password" name="pass" id="mdp" /><br />
-       
-						</p>
-						
-						<a href="Inscription.html">Pas encore inscrit?</a>
-   				</form>
-				
-			</div>
+	
 			
 			<!--Menu-->
 			<div id="conteneur_menu">	
@@ -66,18 +46,6 @@
 				</dd>
 			</dl>	
 			
-			<dl>
-				
-				<!--Menu lien-->
-				<dt>Liens</dt>
-				<dd>
-					<ul> 
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Mails</a></li>
-						<li><a href="#">Codeurs</a></li>
-					</ul>
-				</dd>
-			</dl>
 			
 			</div>
 			</div>
@@ -88,22 +56,17 @@
 		
 		
 		
-		<!--Zone Bleue supplementaire-->
-		<div id="gauche">
-		
-			<div id="zone_texte">
-				<form method="post" action="#" id="lol">
-					<p >
-					<input type="search" name="Rechercher" placeholder="Rechercher" />
-					</p>
-				</form>
-			</div>	
-		</div>
 		
 		
 		<div id="fin">
 			<p>Ce site web a été concu par Gerbault Maxime et Decrand Baptiste, pour le projet de Web dynamique, 
-			en L2 à la faculté des sciences de l'université du Maine.<p>
+			en L2 à la faculté des sciences de l'université du Maine.</p>
+			<p>Vous pouvez nous contacter a ces adresses: </p>
+			<a href="maxime.gerbault.etu@univ-lemans.fr"> Maxime Gerbault </a>
+			<br />
+			<a href="baptiste.decrand.etu@univ-lemans.fr"> Baptiste Decrand </a>
+		
+			<p>Merci a vous d'etre venus sur notre site !
 		</div>
 		
 		

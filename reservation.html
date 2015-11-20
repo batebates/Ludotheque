@@ -11,7 +11,7 @@
 
 	<body>
 		
-			<header>
+		<header>
 				
 			
 			
@@ -28,7 +28,7 @@
 				<dt>Jeux</dt>
 				<dd>
 					<ul> 
-						<li><a href="disponible.html">Disponibles</a></li>
+						<li><a href="./disponible.html">Disponibles</a></li>
 						<li><a href="./reservation.html">Reservation</a></li>
 						<li><a href="./nouveautes.html">A venir</a></li>
 					</ul>
@@ -56,34 +56,24 @@
 			
 		
 		</header>
+	
 		
 		
+		<!-- PARTIE PHP POUR AFFICHER LES POSSIBILITES -->
+					<!-- OUBLIE PAS L'AHURI -->
 		
-		
-		
-		
-		<div id="n_bla">
-		
-			<h1>Les Sorties:<h1>
-			
-			<ul>
-				<li>2015: </li>
-					<ul>
-						<li><p>Star Wars BattleFront <span class="date">|| 19/11/15</span></p></li>
-					</ul>	
-					
-				<li> 2016: </li>	
-					<ul>
-						<li><p>Mirror's Edge Catalyst <span class="date">                                                   || 24/05/2016?</span></p></li>
-						<li><p>No Man's Sky <span class="date">|| Ete 2016</span></p></li>
-						<li><p>World Of Warcraft: Legion (extension) <span class="date">|| Au plus tard 21/09/2016</span></p></li>
-						<li><p>Lost Ark <span class="date">|| Courant 2016</span></p></li>
-						<li><p>Need For Speed <span class="date">|| Courant 2016</span></p></li>
-						<li><p>Mass Effect: Andromeda <span class="date">|| Fin 2016</span></p></li>
-						<li><p>Civilization 6 <span class="date">|| Inconnue</span></p></li>
-						<li><p>For Honor<span class="date">|| Inconnue</span></p></li>
-					</ul>	
-			</ul>		
+		<div id="zone_inscription">
+			<form method="post" action="#">
+						
+						<p> Inscription</p>	
+						<p>
+							<label for="pseudo">Identifiant: <input type="text" name="pseudo" id="pseudo" /></label><br />	
+						
+							<label for="age">Date de naissance : <input type="date" max="2015-12-31" min="1950-01-01" name="age" id="age" /></label><br />
+							<input type="submit" value="Finir" id="bouton"/>
+						</p>
+						
+   				</form>
 		</div>
 		
 		

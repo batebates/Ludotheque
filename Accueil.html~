@@ -19,7 +19,7 @@
 			<div id="conteneur_menu">	
 			<div id="menu">
 			<dl>
-				<dt><a href="./Accueil.html" >Accueil</a></dt>
+				<dt><a href="Accueil.html" >Accueil</a></dt>
 			</dl>	
 				
 			<dl>
@@ -28,8 +28,8 @@
 				<dt>Jeux</dt>
 				<dd>
 					<ul> 
-						<li><a href="./disponible.html">Disponibles</a></li>
-						<li><a href="./reservation.html">Reservation</a></li>
+						<li><a href="#">Disponibles</a></li>
+						<li><a href="#">Reservation</a></li>
 						<li><a href="./nouveautes.html">A venir</a></li>
 					</ul>
 				</dd>
@@ -58,23 +58,68 @@
 		</header>
 
 		<div id="bla">
-			<h1>Les Nouveautes: </h1>
+			<h1>Les Nouveautés: </h1>
 			
-			<div id="img">
-			<img class="img" src="./Tn_final/tn_assassins_creed.jpg" alt="jaquette"> 
-			<p>Assassin's creed:<br />Jeu developpe par Ubisoft Montreal <br /> 
-			Jeu d'action dans lequel vous revetissez l'habit d'un assassin afin d'eliminer vos ennemis avec discretion 
-			</p>			
+			<div>
+				<img src="portal2.jpg" alt="jaquette_portal"> 
+				<p> cette jaquette represente portal2 </p>			 
 			</div>
 			
 			<div>
-			<img src="./Tn_final/tn_battlefield_4.jpg" alt="jaquette"> 
-			<p> </p><br />
+			<img src="" alt="">
+			<p>jeu 2</p>
 			
-			<img src="./Tn_final/tn_bioshock_infinite.jpg" alt="jaquette"> 
-			<p> </p><br />
+			</div>
 			
 			
+			<div>
+			<img src="" alt="">
+			<p>jeu 3</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 4</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 4</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 5</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 6</p>
+			
+			</div>
+			<div>
+			<img src="" alt="">
+			<p>jeu 7</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 8</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 9</p>
+			</div>
+						
+			<div>
+			<img src="" alt="">
+			<p>jeu 10</p>
+			</div>
+			
+			<div>
+			<img src="" alt="">
+			<p>jeu 11</p>
 			</div>
 		</div>
 		

@@ -18,7 +18,7 @@
 			<div id="inscription">
 				
 				
-				<form method="post" action="#">
+				<form method="post" action="traitement.php">
 						<p> Connexion</p>	
 						<p>
 							<label for="pseudo">Identifiant:</label><br />
@@ -28,7 +28,7 @@
        
 						</p>
 						
-						<a href="#">Pas encore inscrit?</a>
+						<a href="Inscription.html">Pas encore inscrit?</a>   				
    				</form>
 				
 			</div>
@@ -74,7 +74,7 @@
 					<ul> 
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">Mails</a></li>
-						<li><a href="#">Codeurs</a></li>
+						<li><a href="Codeurs.html">Codeurs</a></li>
 					</ul>
 				</dd>
 			</dl>
@@ -88,42 +88,33 @@
 		
 		
 		
-		<!--Zone Bleue supplementaire-->
-		<div id="gauche">
+		<!--Zone bleue a gauche de la partie principale-->
+		<div id="n_gauche">
 		
 			<div id="zone_texte">
 				<form method="post" action="#" id="lol">
 					<p >
-					<input type="search" name="Rercher" placeholder="Rechercher" />
+					<input type="search" name="Rechercher" placeholder="Rechercher" />
 					</p>
 				</form>
 			</div>	
 		
-			<h3>Categories</h3>
-			<p>bla</p>
-			<p>bla</p>
-			<p>bla</p>
-			<p>bla</p>
-			<p>bla</p>
-			<p>bla</p>
-			<p>bla</p>
+			
 		</div>
 		
 		
-		<div id="zone_inscription">
-			<form method="post" action="#">
-						
-						<p> Inscription</p>	
-						<p>
-							<label for="pseudo">Identifiant: <input type="text" name="pseudo" id="pseudo" /></label><br />	
-							<label for="pass">Mot de passe: <input type="password" name="pass" id="pass" /></label><br />
-							<label for="email">Adresse mail: <input type="email" name="email" id="email" /></label><br />
-							<label for="adresse">Adresse : <input type="text" name="adresse" id="adresse" /></label><br />
-							<label for="age">Date de naissance : <input type="date" max="2015-12-31" min="1950-01-01" name="age" id="age" /></label><br />
-							<input type="submit" value="Finir" id="bouton"/>
-						</p>
-						
-   				</form>
+		<div id="n_bla">
+			<h1>Les Sorties:<h1>
+			
+			<p>Star Wars BattleFront <span class="date">|| 19/11/15</span></p>
+			<p>Mirror's Edge Catalyst <span class="date">|| 24/05/2016?</span></p>
+			<p>No Man's Sky <span class="date">|| Ete 2016</span></p>
+			<p>World Of Warcraft: Legion (extension) <span class="date">|| Au plus tard 21/09/2016</span></p>
+			<p>Lost Ark <span class="date">|| Courant 2016</span></p>
+			<p>Need For Speed <span class="date">|| Courant 2016</span></p>
+			<p>Mass Effect: Andromeda <span class="date">|| Fin 2016</span></p>
+			<p>Civilization 6 <span class="date">|| Inconnue</span></p>
+			<p>For Honor <span class="date">|| Inconnue</span></p>
 		</div>
 		
 		
