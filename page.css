@@ -13,6 +13,7 @@ header{
 	color: #15D021;
 	border-radius: 10px;
 	max-height: 120px; 
+	margin-top: 6%;
 }
 
 header h1{
@@ -75,7 +76,7 @@ a {
 #menu{
 	position: absolute;
 	margin-left: -30px;
-	margin-top: -45px;
+	margin-top: -35px;
 	background-image: url(header.png);
 	border-radius: 10px;
 }
@@ -104,6 +105,7 @@ dt {
 	text-align: center;
 	background-color: rgba(255, 255, 255, .5);
 	cursor: pointer;
+	margin-top: -30px;
 }
 
 dd{
@@ -151,6 +153,15 @@ dl:hover dd{
 	display: block;
 }
 
+#recherche{
+	background-color: rgba(10, 102, 163, 0.5);
+	border-radius: 10px;
+	width: 100%;
+	
+	
+	
+}	
+
 #gauche {
 	
 	display: inline-block; 
@@ -175,7 +186,7 @@ dl:hover dd{
 }	
 
 #zone_inscription{
-font-size: 20px;
+	font-size: 20px;
 	text-align: justify;
 	padding: 20px;
 	display: inline-block;
