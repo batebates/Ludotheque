@@ -1,0 +1,147 @@
+	<?php
+        $TypeJeux="tous";
+        $age="tous";
+        if (isset($_POST['age'])) {
+            $age = $_POST['age'];
+        }
+ 
+        if (isset($_POST['genre'])) {
+            $TypeJeux = $_POST['genre'];
+        }
+ 
+        include("bdd.php");
+    ?>
+		
+		
+		
+		
+		<form name="genre" method="post" action="disponible.php">
+		<span>Genre: </span>
+			<select name="genre" id="genre" onChange="submit()">
+                <?php
+                if("tous"==$TypeJeux){
+                ?>
+                    <option value="tous" selected>  </option>
+                <?php
+                }
+                else{
+                ?>
+                    <option value="tous">  </option>
+                <?php
+                }
+				
+				$liste_genre = $bdd->query("SELECT DISTINCT TypeJeux FROM VR_grp7_Jeux");
+				while ($liste_genre_fetch = $liste_genre->fetch()) {
+                    if($liste_genre_fetch['TypeJeux']==$TypeJeux){
+                    ?>
+                        <option value="<?php echo $liste_genre_fetch['TypeJeux']; ?>" selected><?php echo $liste_genre_fetch['TypeJeux']; ?></option>
+                    <?php
+                    }
+                    else{
+					?>
+                        <option value="<?php echo $liste_genre_fetch['TypeJeux']; ?>"><?php echo $liste_genre_fetch['TypeJeux']; ?></option>
+					<?php
+                    }
+				}
+				?>
+			</select>
+			
+			
+		<span>Age:</span>	
+            <select name="age" id="age" onChange="submit()">
+                <?php
+                if("tous"==$age){
+                ?>
+                    <option value="tous" selected>  </option>
+                <?php
+                    }
+                else{
+                ?>
+                    <option value="tous">  </option>
+                <?php
+                }
+				$liste_genre = $bdd->query("SELECT DISTINCT Ages FROM VR_grp7_Jeux");
+				while ($liste_genre_fetch = $liste_genre->fetch()) {
+                    if($liste_genre_fetch['Ages']==$age){
+                    ?>
+                    <option value="<?php echo $liste_genre_fetch['Ages']; ?>" selected><?php echo $liste_genre_fetch['Ages']; ?></option>
+                <?php
+                }
+                    else{
+                ?>
+                    <option value="<?php echo $liste_genre_fetch['Ages']; ?>"><?php echo $liste_genre_fetch['Ages']; ?></option>
+                <?php
+                    }
+				}
+				?>
+            </select>
+
+        </form>
+        <br />
+		<?php
+        if (isset($_POST['genre']) AND isset($_POST['age']) AND $TypeJeux !='tous' AND $age!='tous') {
+            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE  TypeJeux='$TypeJeux' AND Ages='$age'");
+            while ($resultat = $res->fetch()) {
+                ?>
+                <table>
+                <tr>
+                	<td><img src="<?php echo $resultat['jaquette'];?>"></img></td> 
+                	<td class="col"><?php echo $resultat['description']; ?></td>
+                	<td><?php echo $resultat['NbJeuxDispos'].'/'.$resultat['NbJeux']; ?></td>
+                </tr>
+                </table>
+                <br />
+            <?php
+            }
+        }
+        else if (isset($_POST['genre']) AND isset($_POST['age']) AND $TypeJeux!='tous' AND $age=='tous') {
+                $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE TypeJeux='$TypeJeux'");
+                while ($resultat = $res->fetch()) {
+                   ?>
+                <table>   
+                <tr>
+                	<td><img src="<?php echo $resultat['jaquette'];?>"></img> <td> 
+                	<td class="col"><?php echo $resultat['description']; ?></td>
+                	<td><?php echo $resultat['NbJeuxDispos'].'/'.$resultat['NbJeux']; ?></td>
+                </tr>
+                </table>
+                <br />
+            <?php
+                }
+        }
+        else if (isset($_POST['genre']) AND isset($_POST['age']) AND $TypeJeux=='tous' AND $age!='tous') {
+            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE Ages='$age'");
+            while ($resultat = $res->fetch()) {
+                ?>
+                <table>
+                <tr>
+                	<td><img src="<?php echo $resultat['jaquette'];?>"></img></td> 
+                	<td class="col"><?php echo $resultat['description']; ?></td>
+                	<td><?php echo $resultat['NbJeuxDispos'].'/'.$resultat['NbJeux']; ?></td>
+                </tr>	
+                </table>
+                <br />          
+            <?php
+            }
+        }
+        else{
+            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque");
+            while ($resultat = $res->fetch()) {
+            ?>
+            <table>
+		<tr>
+                	<td><img src="<?php echo $resultat['jaquette'];?>"></img></td> 
+                	<td class="col"><?php echo $resultat['description']; ?></td>
+                	<td><?php echo $resultat['NbJeuxDispos'].'/'.$resultat['NbJeux']; ?></td>
+                </tr>
+            </table>    
+              <br />  
+            <?php
+            }
+        }
+
+        ?>
+        
+
+	
+

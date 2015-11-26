@@ -25,17 +25,25 @@ header h1{
 a {
 	text-decoration: none;
 }
+	
 
-#img p{
-	display: block;
-
-}	
-
-#img img{
-	display: block;
-	float: left;
+.img img{
+	display: inline-block;
+	vertical-align: top;
 
 }
+
+#text{
+	text-align: center;	
+}
+
+.col{
+	padding-right: 50px;
+	padding-left: 20px;
+	font-size: 18px;	
+	
+	
+}	
 
 #inscription form{
 	display: block;
