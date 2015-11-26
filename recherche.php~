@@ -30,7 +30,7 @@
                 <?php
                 }
 				
-				$liste_genre = $bdd->query("SELECT TypeJeux FROM VR_grp7_Jeux");
+				$liste_genre = $bdd->query("SELECT DISTINCT TypeJeux FROM VR_grp7_Jeux");
 				while ($liste_genre_fetch = $liste_genre->fetch()) {
                     if($liste_genre_fetch['TypeJeux']==$TypeJeux){
                     ?>

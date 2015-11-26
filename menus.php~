@@ -1,4 +1,7 @@
-
+<?php
+require 'panier.class.php';
+$panier =new panier;
+?>
 
 <!--Menu-->
 	<div id="conteneur_menu">	
