@@ -30,7 +30,7 @@
                 <?php
                 }
 				
-				$liste_genre = $bdd->query("SELECT TypeJeux FROM VR_grp7_Jeux");
+				$liste_genre = $bdd->query("SELECT DISTINCT TypeJeux FROM VR_grp7_Jeux");
 				while ($liste_genre_fetch = $liste_genre->fetch()) {
                     if($liste_genre_fetch['TypeJeux']==$TypeJeux){
                     ?>
@@ -80,7 +80,7 @@
         <br />
 		<?php
         if (isset($_POST['genre']) AND isset($_POST['age']) AND $TypeJeux !='tous' AND $age!='tous') {
-            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE  TypeJeux='$TypeJeux' AND Ages='$age'");
+            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE  TypeJeux='$TypeJeux' AND Ages='$age' AND NbJeuxDispos > 0");
             while ($resultat = $res->fetch()) {
                 ?>
                 <table>
@@ -96,7 +96,7 @@
             }
         }
         else if (isset($_POST['genre']) AND isset($_POST['age']) AND $TypeJeux!='tous' AND $age=='tous') {
-                $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE TypeJeux='$TypeJeux'");
+                $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE TypeJeux='$TypeJeux' AND NbJeuxDispos > 0");
                 while ($resultat = $res->fetch()) {
                    ?>
                 <table>   
@@ -112,7 +112,7 @@
                 }
         }
         else if (isset($_POST['genre']) AND isset($_POST['age']) AND $TypeJeux=='tous' AND $age!='tous') {
-            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE Ages='$age'");
+            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE Ages='$age' AND NbJeuxDispos > 0");
             while ($resultat = $res->fetch()) {
                 ?>
                 <table>
@@ -120,8 +120,7 @@
                 	<td><img src="<?php echo $resultat['jaquette'];?>"></img></td> 
                 	<td class="col"><?php echo $resultat['description']; ?></td>
                 	<td><?php echo $resultat['NbJeuxDispos'].'/'.$resultat['NbJeux']; ?></td>
-			<td><a href="addpanier.php?id=<?php echo $resultat['id'];?>">Ajouter au panier</a>
-</td>
+					<td><a href="addpanier.php?id=<?php echo $resultat['id'];?>">Ajouter au panier</a>
                 </tr>	
                 </table>
                 <br />          
@@ -129,7 +128,7 @@
             }
         }
         else{
-            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque");
+            $res = $bdd->query("SELECT * FROM  VR_grp7_Jeux NATURAL JOIN VR_grp7_JeuxLudotheque WHERE NbJeuxDispos > 0");
             while ($resultat = $res->fetch()) {
             ?>
             <table>
